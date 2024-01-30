@@ -1,2 +1,2 @@
-# Wordle with Friends
- This project is a competitive version of the popular Wordle game.
+# Wordle | MySkindle
+ This project is a skincare themed version of the popular Wordle game.

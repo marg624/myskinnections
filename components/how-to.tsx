@@ -14,14 +14,6 @@ const HowTo = () => {
               <h3 className="text-3xl mb-4 leading-snug">
               How To Play
               </h3>
-              <h2 className="text-xl mb-2 leading-snug">
-              Choose play style.
-              </h2>
-
-              1. <strong>[w/ friends]</strong><br/> This is the multiplayer version. You can either create a new game to then share the game id with a friend OR join an existing game by entering a game id when prompted. Once the game is started, players will take turn guessing on the board.
-              <br/> 
-              2. <strong>[alone]</strong><br/> This is the single player version. Like the classic Wordle, you will be guessing solo at your leisure.
-
 
               <h2 className="text-xl mb-2 leading-snug">
               <br/>Make A Guess

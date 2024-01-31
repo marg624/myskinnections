@@ -29,7 +29,7 @@ const Alert = ({ preview }: Props) => {
             </>
           ) : (
             <>
-              <strong><a href="https://with-friends-collection.vercel.app/">w/ friends </a> </strong> A collection of games you can play with friends.
+              Powered by <strong><a href="https://apps.apple.com/us/app/myskin-data/id6449375671">MySkin Data.</a> </strong> Track your skincare journey and have fun along the way!
             </>
           )}
         </div>

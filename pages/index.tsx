@@ -4,56 +4,42 @@ import Layout from '../components/layout'
 import Head from 'next/head'
 import { CMS_NAME } from '../lib/constants'
 import React, {useState} from 'react';
-import StartGame from '../components/start-game'
 import utilStyles from '../styles/utils.module.css';
-import dictionary from '../resources/5-letter-words.js';
+import dictionary from '../resources/skin-words.js';
 import Board from '../components/Board';
-import InitialOptions from '../components/InitialOptions';
 import logo from '../resources/logo.png';
 import refresh from '../resources/refresh.png';
-import { readGame, createGame, updateGame } from '../utils/utils';
 import * as uuid from 'uuid';
 import OptionsButton from '../components/options-button'
+import StartGame from '../components/start-game'
 
 
-const gameIdCreate = Math.floor(Math.random() * 5758);
-const winningWordCreate = dictionary.words[gameIdCreate];
+
 
 export default function Index() {
-
-  const [initialState, setInitialState] = useState(null);
   const [ready, setReady] = useState(false);
-
-
-  function startGame(gameId, isSinglePlayer, playerName) {
-      let newArr = gameId ? {"gameId":gameId, "winningWord":dictionary.words[gameId].toUpperCase(), "singlePlayer":isSinglePlayer, "playerName":playerName, "isFirst":false} 
-                          : {"gameId":gameIdCreate, "winningWord":winningWordCreate.toUpperCase(), "singlePlayer":isSinglePlayer, "playerName":playerName, "isFirst":true};
-      if (!isSinglePlayer) {
-          if (gameId) {
-            // join existing game
-            updateGame(gameId, playerName, null);
-          } else {
-            // create game
-            createGame(gameIdCreate, winningWordCreate.toUpperCase(), playerName);
-          }
-      }
-      setInitialState(newArr);
-  }
+  const [gameId, setGameId] = useState("");
+  const [winningWord, setWinningWord] = useState("");
 
   function hitReady() {
-    setReady(true)
+      const today = new Date();
+      const date = today.getDate();
+      const gameIdCreate = date;
+      const winningWordCreate = dictionary.words[date];
+      setGameId(gameIdCreate.toString())
+      setWinningWord(winningWordCreate.toUpperCase())
+      setReady(true)
   }
 
   return (
     <>
       <Layout>
         <Head>
-          <title>Wordle w/ friends</title>
+          <title>MySkindle</title>
         </Head>
         <Container>
           <Intro />
-          { (ready && initialState) && <Board winningWord={initialState["winningWord"]} gameId={initialState["gameId"]} isSinglePlayer={initialState["singlePlayer"]} playerName={initialState["playerName"]}  isFirst={initialState["isFirst"]} /> }
-          { (ready && !initialState) && <InitialOptions startGame={startGame} /> }
+          { ready && <Board winningWord={winningWord} gameId={gameId} /> }
           { !ready && <StartGame onClick={hitReady} /> }
           <OptionsButton />
         </Container>

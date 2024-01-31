@@ -1,5 +1,5 @@
 import utilStyles from '../styles/utils.module.css';
-import { evaluations, isWord, updateGame, readGame, currTurn } from '../utils/utils';
+import { evaluations, isWord, currTurn } from '../utils/utils';
 import {
   useState,
   useRef,
@@ -27,11 +27,8 @@ type Props = {
   gameId: string
   winningWord: string
   boardState: BoardState
-  updateStateFunc: Function
   focusNextFunc: Function
-  myName: string
-  isMyTurn: boolean
-  isSinglePlayer: boolean
+  isWin: boolean
 }
 
 
@@ -41,11 +38,8 @@ const Row = ({
   gameId,
   winningWord,
   boardState,
-  updateStateFunc,
   focusNextFunc,
-  myName,
-  isMyTurn,
-  isSinglePlayer,
+  isWin
 }: Props) => {
   winningWord = winningWord.toUpperCase();
   const winningWordArray = Object.assign([], winningWord);
@@ -63,11 +57,11 @@ const Row = ({
   const row0 = useRef({ 0: next0, 1: next1, 2: next2, 3: next3, 4: next4 });
   const [evalArray0, setEvalArray0] = (boardStateEvaluation) ? useState(boardStateEvaluation) : useState(['', '', '', '', '']);
   const [evals, setEvals] = useState(['','','','','']);
-  let [readOnly, setReadOnly] = useState(boardStateReadOnly === true);
+  let [readOnly, setReadOnly] = useState(true);
   const guess = Object.assign([], boardStateGuess);
 
   useEffect(() => {
-    if (isMyTurn && currTurn(boardState) == currRowNum) {
+    if (!isWin && currTurn(boardState) == currRowNum) {
       setReadOnly(false);
       if (!readOnly && (next0.current)) {
         if (!next0.current.value) {
@@ -111,13 +105,7 @@ const Row = ({
       if (isWord(stringData)) {
         let ev = evaluations(newTArr, winningWord, winningWordArray);
         setEvalArray0(ev);
-        let resp = true;
-        if (!isSinglePlayer) {
-          resp = updateGame(gameId, myName, stringData);
-        }
-        if (resp) {
-          focusNextFunc(rowNum, stringData.toUpperCase(), ev);
-        }
+        focusNextFunc(rowNum, stringData.toUpperCase(), ev);
       } else {
         let ev = setNotAWordEvals();
         setEvalArray0(ev);

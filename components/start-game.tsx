@@ -23,7 +23,7 @@ const StartGame = ({
           textAlign: 'center',
           width: '100%'
         }}>
-          [ May luck be in your favor ] <br/>
+          [ Good luck and glow on! ] <br/>
           <button onClick={onClick} className="hover:scale-110" > 
             <img src={playImage.src} width="100px" /> 
           </button>

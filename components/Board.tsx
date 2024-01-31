@@ -64,7 +64,7 @@ submit() {
     let dateString = `${month} ${date}`;
 
     let gameOverTextNew0 = "Congrats! You win this weeks MySkinnections in " + num + " guesses";    
-    let gameOverTextNew = "MySkinnections" + dateString + "\n" + trophy + this.state.numGuesses + " guesses";
+    let gameOverTextNew = "MySkinnections " + dateString + "\n" + trophy + this.state.numGuesses + " guesses";
     newState = Object.assign(newState, { win: true }, { gameOver: true }, {gameOverMsg: gameOverTextNew0}, { gameOverText: gameOverTextNew });
   }
 
@@ -134,7 +134,7 @@ render() {
   const is4clicked = (this.state.clickedWords.length >= 4);
   const defaultBoxStyle = "flex justify-center items-center bg-stone-100 shadow-sm rounded-md";
   const defaultClickedBoxStyle = "flex justify-center items-center bg-neutral-600 shadow-sm rounded-md";
-  const gridStyle = isMobile ? "grid grid-cols-4 gap-4 content-stretch break-words text-sm h-64" : "grid grid-cols-4 gap-4 break-words text-md h-80"
+  const gridStyle = isMobile ? "grid grid-cols-4 gap-4 content-stretch break-words text-sm h-80" : "grid grid-cols-4 gap-4 break-words text-md h-80"
   const colStyleDone = isMobile ? "text-white col-span-4 flex justify-center items-center bg-lime-800 shadow-sm rounded-md text-sm" : "text-white col-span-4 flex justify-center items-center bg-lime-800 shadow-sm rounded-md text-md" 
 
 

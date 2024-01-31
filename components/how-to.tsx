@@ -16,17 +16,15 @@ const HowTo = () => {
               </h3>
 
               <h2 className="text-xl mb-2 leading-snug">
-              <br/>Make A Guess
+              <br/>Find groups of four items that share something in common.
               </h2>
-              Guess a 5 letter word on your turn. There are 6 turns total. The board tiles will change colors based on how close your guess is to the winning word.
-              <br/> <br/> <strong>For example:</strong>
+               1. Select four items <br/>
+               2. Tap "SUBMIT" to check if your guess is correct  
+              <br/> <br/> <strong>Category examples:</strong>
               <br/>
-                <img src={howtoGreen.src} width="200px" />  <strong>E</strong> is in the word and in the corrent spot.
+                Lash Growth Products: GrandeLash, Castor Oil, Revitalash, Latisse
               <br/>
-              <img src={howtoYellow.src} width="200px"  />   <strong>S</strong> is in the word but in the wrong spot.
-              <br/>
-              <img src={howtoGray.src} width="200px"  /> <strong>S, O, U, R</strong> are not in the word in any spot.
-              <br/>
+                _____ Acid: Hylauronic, Mandelic, Ferulic, Ascorbic   
 
           </div>
   )

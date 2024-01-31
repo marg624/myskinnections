@@ -53,7 +53,7 @@ class Board extends React.Component<Props, GuessState>  {
 submit() {
   let resp = this.checkWin()
   let num = this.state.numGuesses + 1
-  let newState = this.state
+  let newState = Object.assign(this.state, {numGuesses: num})
 
   if (this.state.categoriesWon.length == 4 ) {
     let trophy = "🏅";
@@ -132,20 +132,24 @@ sayCopied() {
 render() {
 
   const is4clicked = (this.state.clickedWords.length >= 4);
-  const defaultBoxStyle = (is4clicked) ? "bg-red-100 shadow-sm rounded-md" : "bg-red-100 hover:bg-orange-500 shadow-sm rounded-md";
-  const defaultClickedBoxStyle = "bg-orange-500 shadow-sm rounded-md";
-  const defaultDoneBoxStyle = "bg-amber-500 shadow-sm rounded-md";
+  const defaultBoxStyle = "flex justify-center items-center bg-stone-100 shadow-sm rounded-md";
+  const defaultClickedBoxStyle = "flex justify-center items-center bg-neutral-600 shadow-sm rounded-md";
+  const gridStyle = isMobile ? "grid grid-cols-4 gap-4 content-stretch break-words text-sm h-64" : "grid grid-cols-4 gap-4 break-words text-md h-80"
+  const colStyleDone = isMobile ? "text-white col-span-4 flex justify-center items-center bg-lime-800 shadow-sm rounded-md text-sm" : "text-white col-span-4 flex justify-center items-center bg-lime-800 shadow-sm rounded-md text-md" 
+
 
   return (
       <div className={utilStyles.center}> 
         {this.state.win && <Confetti />}
        
         <div className={utilStyles.center}><br/>
-        <span>         
-          {
-              Array.from(this.state.categoriesWon.entries()).map(([key, value], index) => {
+
+  
+        <span className={gridStyle}>
+        {
+          Array.from(this.state.categoriesWon.entries()).map(([key, value], index) => {
                 return (
-                  <span> <h3>{value}</h3>
+                  <span className={colStyleDone}> 
                  
                     {
                         Array.from(this.state.winningMapCatToWords.entries()).map(([key2, value2], index2) => {
@@ -153,21 +157,11 @@ render() {
                           if (show) {
 
                           return (
-                             <span className="grid grid-cols-4 gap-4">
-                                <span className={defaultDoneBoxStyle} >
-                                  <WordBox word={value2[0].toUpperCase()} style="" />
-                                </span>
-                                <span className={defaultDoneBoxStyle} >
-                                  <WordBox word={value2[1].toUpperCase()} style="" />
-                                </span>
-                                <span className={defaultDoneBoxStyle} >
-                                  <WordBox word={value2[2].toUpperCase()} style="" />
-                                </span>
-                                <span  className={defaultDoneBoxStyle} >
-                                  <WordBox word={value2[3].toUpperCase()} style="" />
-                                </span>
-                                <br/>
-                              </span> 
+                            <span>
+                            <strong>{value}</strong><br/>
+                            {value2[0].toUpperCase() + ", " + value2[1].toUpperCase() + ", " + value2[2].toUpperCase() + ", " + value2[3].toUpperCase()}
+                            </span>
+
                           );
                         }
                       })
@@ -176,18 +170,13 @@ render() {
                   </span> 
                 );
             })
-          }
-         
-          </span>
-
-  
-        <span className="grid grid-cols-4 gap-4">
+        }
           {
               Array.from(this.state.winningMapWordToCats.entries()).map(([key, value], index) => {
                 let st = (this.state.clickedWords.indexOf(key) > -1) ? defaultClickedBoxStyle : defaultBoxStyle
                 return (
                     <span key={index} className={st} onClick={() => this.clickedWord(key)}>
-                      <WordBox word={key} style="" />
+                      {key}
                     </span>
                 );
             })

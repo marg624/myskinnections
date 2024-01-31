@@ -5,7 +5,7 @@ import Head from 'next/head'
 import { CMS_NAME } from '../lib/constants'
 import React, {useState} from 'react';
 import utilStyles from '../styles/utils.module.css';
-import dictionary from '../resources/skin-words.js';
+import categories from '../resources/categories.js';
 import Board from '../components/Board';
 import logo from '../resources/logo.png';
 import refresh from '../resources/refresh.png';
@@ -19,15 +19,61 @@ import StartGame from '../components/start-game'
 export default function Index() {
   const [ready, setReady] = useState(false);
   const [gameId, setGameId] = useState("");
-  const [winningWord, setWinningWord] = useState("");
+  const [winningMapCategories, setWinningMapCategories] = useState(null);
+  const [winningMapCategoriesKey, setWinningMapCategoriesKey] = useState(null);
 
   function hitReady() {
       const today = new Date();
       const date = today.getDate();
       const gameIdCreate = date;
-      const winningWordCreate = dictionary.words[date];
-      setGameId(gameIdCreate.toString())
-      setWinningWord(winningWordCreate.toUpperCase())
+    //  const winningWordCreate = dictionary.words[date];
+    //  setGameId(gameIdCreate.toString())
+    //  setWinningWord(winningWordCreate.toUpperCase())
+      const winningMap = new Map();
+      const winningMapCategoriesKey1 = new Map();
+      const game1 = categories.game[0] // 0 should be index of the day/week
+      const cat1 = Object.keys(game1[0])[0]
+      winningMap.set(game1[0][cat1][0].toUpperCase(), cat1.toUpperCase());
+      winningMap.set(game1[0][cat1][1].toUpperCase(), cat1.toUpperCase());
+      winningMap.set(game1[0][cat1][2].toUpperCase(), cat1.toUpperCase());
+      winningMap.set(game1[0][cat1][3].toUpperCase(), cat1.toUpperCase());
+      winningMapCategoriesKey1.set(cat1.toUpperCase(), game1[0][cat1]);
+
+      const cat2 = Object.keys(game1[1])[0]
+      winningMap.set(game1[1][cat2][0].toUpperCase(), cat2.toUpperCase());
+      winningMap.set(game1[1][cat2][1].toUpperCase(), cat2.toUpperCase());
+      winningMap.set(game1[1][cat2][2].toUpperCase(), cat2.toUpperCase());
+      winningMap.set(game1[1][cat2][3].toUpperCase(), cat2.toUpperCase());
+      winningMapCategoriesKey1.set(cat2.toUpperCase(), game1[1][cat2]);
+
+
+      const cat3 = Object.keys(game1[2])[0]
+      winningMap.set(game1[2][cat3][0].toUpperCase(), cat3.toUpperCase());
+      winningMap.set(game1[2][cat3][1].toUpperCase(), cat3.toUpperCase());
+      winningMap.set(game1[2][cat3][2].toUpperCase(), cat3.toUpperCase());
+      winningMap.set(game1[2][cat3][3].toUpperCase(), cat3.toUpperCase());
+      winningMapCategoriesKey1.set(cat3.toUpperCase(), game1[2][cat3]);
+
+
+      const cat4 = Object.keys(game1[3])[0]
+      winningMap.set(game1[3][cat4][0].toUpperCase(), cat4.toUpperCase());
+      winningMap.set(game1[3][cat4][1].toUpperCase(), cat4.toUpperCase());
+      winningMap.set(game1[3][cat4][2].toUpperCase(), cat4.toUpperCase());
+      winningMap.set(game1[3][cat4][3].toUpperCase(), cat4.toUpperCase());
+      winningMapCategoriesKey1.set(cat4.toUpperCase(), game1[3][cat4]);
+
+        // Convert the Map to an array of key-value pairs
+  const arrayFromMap = Array.from(winningMap.entries());
+
+  // Shuffle the array
+  const shuffledArray = arrayFromMap.sort(() => Math.random() - 0.5);
+
+  // Create a new Map from the shuffled array
+  const shuffledMap = new Map(shuffledArray);
+
+
+      setWinningMapCategories(shuffledMap)
+      setWinningMapCategoriesKey(winningMapCategoriesKey1)
       setReady(true)
   }
 
@@ -35,11 +81,11 @@ export default function Index() {
     <>
       <Layout>
         <Head>
-          <title>MySkindle</title>
+          <title>MySkinnections</title>
         </Head>
         <Container>
           <Intro />
-          { ready && <Board winningWord={winningWord} gameId={gameId} /> }
+          { ready && <Board winningMapWordToCats={winningMapCategories} winningMapCatToWords={winningMapCategoriesKey}  /> }
           { !ready && <StartGame onClick={hitReady} /> }
           <OptionsButton />
         </Container>

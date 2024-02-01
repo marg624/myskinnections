@@ -25,13 +25,12 @@ export default function Index() {
   function hitReady() {
       const today = new Date();
       const date = today.getDate();
-      const gameIdCreate = date;
-    //  const winningWordCreate = dictionary.words[date];
-    //  setGameId(gameIdCreate.toString())
-    //  setWinningWord(winningWordCreate.toUpperCase())
+      const gameIdCreate = date >= 3 ? Math.floor((date - 3) / 7) : 0;
+
       const winningMap = new Map();
       const winningMapCategoriesKey1 = new Map();
-      const game1 = categories.game[0] // 0 should be index of the day/week
+      const game1 = categories.game[gameIdCreate]
+
       const cat1 = Object.keys(game1[0])[0]
       winningMap.set(game1[0][cat1][0].toUpperCase(), cat1.toUpperCase());
       winningMap.set(game1[0][cat1][1].toUpperCase(), cat1.toUpperCase());
@@ -63,13 +62,9 @@ export default function Index() {
       winningMapCategoriesKey1.set(cat4.toUpperCase(), game1[3][cat4]);
 
         // Convert the Map to an array of key-value pairs
-  const arrayFromMap = Array.from(winningMap.entries());
-
-  // Shuffle the array
-  const shuffledArray = arrayFromMap.sort(() => Math.random() - 0.5);
-
-  // Create a new Map from the shuffled array
-  const shuffledMap = new Map(shuffledArray);
+      const arrayFromMap = Array.from(winningMap.entries());
+      const shuffledArray = arrayFromMap.sort(() => Math.random() - 0.5);
+      const shuffledMap = new Map(shuffledArray);
 
 
       setWinningMapCategories(shuffledMap)

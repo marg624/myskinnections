@@ -25,5 +25,44 @@ export default {
       { "enhanced adverse effects of not wearing spf": ["aging", "burn", "cancer", "wrinkles"] },
       { "types of acne": ["whiteheads", "Papules", "Nodules", "Blackheads"] }
      ],
-
+  [{ "Anti-Aging Ingredients": ["retinol", "collagen", "antioxidants", "hyaluronic acid"] },
+      { "Common Skin Conditions": ["eczema", "psoriasis", "rosacea", "dermatitis"] },
+      { "Winter Skincare Challenges":["dry skin", "chapped lips", "flakiness", "windburn"] },
+      { "Skincare Brands for Sensitive Skin":["Vanicream", "Cetaphil", "CeraVe", "Eucerin"] }
+    ],
+  [{ "DIY Skincare Mask ingredients": ["honey", "avocado", "oatmeal", "yogurt"] },
+      { "Hydration Helpers": ["water", "hyaluronic acid", "moisturizer", "serums"] },
+      { "what you can track daily on the myskin data ios app": ["habits", "routine", "photos", "notes"] },
+      { "Scandinavian Skincare Brands":["Lumene", "Ole Henriksen", "Eleni & Chris", "Rudolph Care"] }
+    ],
+  [{ "Essential Oils used in Skincare":["tea tree", "lavender", "rosehip", "chamomile"] },
+      { "Types of Treatments with a dermatologist or esthetician":["facials", "chemical peel", "microdermabrasion", "laser therapy"] },
+      { "Skin-friendly Foods to eat":["avocado", "salmon", "berries", "nuts"] },
+      { "Environmental Skin Stressors":["pollution", "free radicals", "UV exposure", "blue light"] }
+    ],
+  [{ "Benefits of Hydration":["plumpness", "elasticity", "radiance", "less wrinkles"] },
+      { "Acne Scar Remedies":["vitamin C", "rosehip oil", "aloe vera", "glycolic acid"] },
+      { "Exotic Skincare Ingredients":["snail mucin", "propolis", "ginseng", "cica"] },
+      { "Luxury Skincare Brands":["La Mer", "La Prairie", "Sisley", "Guerlain"] }
+    ],
+  [{ "Ingredients for Hyperpigmentation":["niacinamide", "vitamin C", "alpha arbutin", "licorice extract"] },
+      { "Lesser-known Acne Triggers":["hair products", "touching face", "phones", "over exfoliate"] },
+      { "Sun Protection Habits":["reapplication", "wide-brimmed hats", "sunglasses", "seeking shade"] },
+      { "Dermatologist-Recommended Brands":["EltaMD", "Cetaphil", "Differin", "Vanicream"] }
+    ],
+  [{ "Skin Barrier Support":["ceramides", "fatty acids", "cholesterol", "niacinamide"] },
+      { "Skin Sensitivity Triggers":["fragrance", "harsh chemicals", "over-exfoliation", "hot water"] },
+      { "Drugstore Skincare Favorites":["CeraVe", "Neutrogena", "Olay", "Eucerin"] },
+      { "Skin Undertones":["warm", "cool", "neutral", "olive"] }
+    ],
+  [{ "Skincare Tools":["jade roller", "derma roller", "facial brush", "gua sha"] },
+      { "Asian Skincare Brands":["Shiseido", "Hada Labo", "SK-II", "Tony Moly"] },
+      { "French Pharmacy Brands":["Avene", "Bioderma", "Vichy", "Caudalie"] },
+      { "Types of Exfoliants": ["physical", "chemical", "scrubs", "enzymes"] }
+    ],
+  [{ "Japanese Drugstore Skincare Brands":["Biore", "Kose", "Hada Labo", "Senka"] },
+      { "Ingredients to generally Avoid in skincare": ["parabens", "sulfates", "fragrances", "alcohol"] },
+      { "things on the homepage of myskin data ios app": ["progress", "highlights", "streaks", "milestones"] },
+      { "Essential Skincare Steps": ["cleanser", "moisturizer", "exfoliation", "toner"] }
+    ]
   ]};

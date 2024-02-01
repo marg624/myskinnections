@@ -8,7 +8,7 @@ export default {
      [{ "Top Dermatologist YouTubers": ["Dr Dray", "PillowTalkDerm", "Doctorly", "Dr Sam Ellis"] },
       { "Viral French Pharmacy items": ["a313", "Nuxe", "Biafine", "Ialuset"] },
       { "Drugstore skincare brands": ["cerave", "cetaphil", "neutrogena", "burts bees"] },
-      { "Different ways to use Aquaphor Healing Ointment": ["hand mask", "brow pomade", "slugging", "lip balm"] }
+      { "Skin types": ["oily", "normal", "dry", "combination"] }
      ],
     [{ "Medical Grade Skincare Brands": ["skinbetter", "Skinmedica", "Skinceuticals", "Alastin"] },
       { "Prescription only skincare medicines": ["tretinoin", "winlevy", "clindamycin", "spiro"] },
@@ -16,7 +16,7 @@ export default {
       { "Types of Antioxidants": ["zinc", "copper", "vitamin c", "selenium"] }
      ],
     [{ "Different ways to say dehydrated": ["dry", "thirsty", "Arid", "parched"] },
-      { "Skin types": ["oily", "normal", "dry", "combination"] },
+      { "Different ways to use Aquaphor Healing Ointment": ["hand mask", "brow pomade", "slugging", "lip balm"] },
       { "Celebrity owned skincare brands": ["Rhodes", "SKKN", "Honest", "Fenty"] },
       { "Supplements taken for skin": ["collagen", "omega 3", "vitamin e", "zinc"] }
      ],

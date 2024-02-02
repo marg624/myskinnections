@@ -17,7 +17,7 @@ export default {
      ],
     [{ "Different ways to say dehydrated": ["dry", "thirsty", "Arid", "parched"] },
       { "Different ways to use Aquaphor Healing Ointment": ["hand mask", "brow pomade", "slugging", "lip balm"] },
-      { "Celebrity owned skincare brands": ["Rhodes", "SKKN", "Honest", "Fenty"] },
+      { "Celebrity owned skincare brands": ["Rhode", "SKKN", "Honest", "Fenty"] },
       { "Supplements taken for skin": ["collagen", "omega 3", "vitamin e", "zinc"] }
      ],
   [{ "Common acne triggers": ["pillowcases", "stress", "food", "sleep"] },
@@ -64,5 +64,20 @@ export default {
       { "Ingredients to generally Avoid in skincare": ["parabens", "sulfates", "fragrances", "alcohol"] },
       { "things on the homepage of myskin data ios app": ["progress", "highlights", "streaks", "milestones"] },
       { "Essential Skincare Steps": ["cleanser", "moisturizer", "exfoliation", "toner"] }
+    ],
+  [{ "Skincare Tools and Devices":["jade roller", "microcurrent device", "derma roller", "LED mask"] },
+      { "Celebrity Male-owned skincare/beauty brands":["Le Domaine", "SAble Labs", "Twentynine Palms", "UN/DN LAQR"] },
+      { "Skin Conditions":["eczema", "psoriasis", "rosacea", "acne"] },
+      { "Names for Facial Expressions and Wrinkles":["laugh lines", "crow's feet", "11s", "frown lines"] }
+    ],
+  [{ "Brands that sell at-home LED masks":["Qure", "OmniLux", "Dr. Dennis Gross", "Shani Darden"] },
+      { "Essential Minerals for Skin":["zinc", "selenium", "copper", "magnesium"] },
+      { "Lifestyle Habits that effect your skin":["smoking", "hydration", "diet", "sleep"] },
+      { "Artist-owned skincare brands":["humanrace", "keys soulcare", "haus", "loved01"] }
+    ], 
+  [{ "Ways a skincare company can be Environmentally Aware":["packaging", "reef-safe", "sustainable", "cruelty-free"] },
+      { "Reasons to adjust your typical Skincare Routine":["seasons", "travel", "post-workout", "stress"] }, 
+      { "Celebrity-owned skincare brands":["uncommonjames", "kora", "EleVen", "KINLO"] },
+      { "Stores you can buy skincare from":["sephora", "ulta", "Target", "CVS"] }
     ]
   ]};

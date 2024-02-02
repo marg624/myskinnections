@@ -13,7 +13,7 @@ const Intro = () => {
         <a href="https://myskinnections.vercel.app/">MySkinnections</a>
       </h1>
       <h4 className="text-center md:text-left text-lg mt-5 md:pl-8">
-        {dateString} | A skincare themed version of Connections. Every Sunday.
+        {dateString} | A skincare themed version of Connections. Daily.
       </h4>
     </section>
   )

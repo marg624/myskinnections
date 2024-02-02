@@ -25,11 +25,11 @@ export default function Index() {
   function hitReady() {
       const today = new Date();
       const date = today.getDate();
-      const gameIdCreate = date >= 3 ? Math.floor((date - 3) / 7) : 0;
+     // const gameIdCreate = date >= 3 ? Math.floor((date - 3) / 7) : 0;
 
       const winningMap = new Map();
       const winningMapCategoriesKey1 = new Map();
-      const game1 = categories.game[gameIdCreate]
+      const game1 = categories.game[date]
 
       const cat1 = Object.keys(game1[0])[0]
       winningMap.set(game1[0][cat1][0].toUpperCase(), cat1.toUpperCase());
@@ -80,6 +80,9 @@ export default function Index() {
         </Head>
         <Container>
           <Intro />
+          <div className={utilStyles.center}>
+          <h3>Create four groups of four.</h3>
+          </div>
           { ready && <Board winningMapWordToCats={winningMapCategories} winningMapCatToWords={winningMapCategoriesKey}  /> }
           { !ready && <StartGame onClick={hitReady} /> }
           <OptionsButton />

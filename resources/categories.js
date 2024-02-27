@@ -1,5 +1,10 @@
 export default {
     game: [
+   [{ "synonyms for serum": ["elixir", "potion", "concentrate", "essence"] },
+      { "Attributes of Youthful Skin": ["plump", "firm", "bright", "elastic"] },
+      { "Common Signs of Aging Skin": ["wrinkled", "sagging", "dull", "uneven"] },
+      { "Attributes of Acne-Prone Skin": ["blemished", "congested", "clogged", "pimple prone"] }
+     ],    
     [{ "Features of myskin data ios app": ["goals", "routines", "export", "ai chat"] },
       { "reasons not to pick or pop pimple": ["scarring", "bacteria", "infection", "damage"] },
       { "K beauty brands": ["Laniege", "COSRX", "Dr Jart+", "Anua"] },
@@ -150,10 +155,5 @@ export default {
       { "Signs of Skin Sensitivity to Products": ["redness", "burning", "tingling", "irritation"] },
       { "Desired attributes of a Youthful Complexion": ["plump", "supple", "smooth", "blemish-free"] },
       { "Symptoms of Dehydrated Skin": ["tightness", "flakiness", "dullness", "fine lines"] }
-     ],
-   [{ "synonyms for serum": ["elixir", "potion", "concentrate", "essence"] },
-      { "Attributes of Youthful Skin": ["plump", "firm", "bright", "elastic"] },
-      { "Common Signs of Aging Skin": ["wrinkled", "sagging", "dull", "uneven"] },
-      { "Attributes of Acne-Prone Skin": ["blemished", "congested", "clogged", "pimple prone"] }
-     ]    
+     ]   
   ]};

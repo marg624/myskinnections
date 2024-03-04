@@ -25,7 +25,7 @@ export default {
       { "Celebrity owned skincare brands": ["Rhode", "SKKN", "Honest", "Fenty"] },
       { "Supplements taken for skin": ["collagen", "omega 3", "vitamin e", "zinc"] }
      ],
-     [{ "Top Dermatologist YouTubers": ["Dr Dray", "PillowTalkDerm", "Doctorly", "Dr Sam Ellis"] },
+     [{ "Top Dermatologist YouTubers": ["Dr Dray", "Pillow Talk Derm", "Doctorly", "Dr Sam Ellis"] },
       { "Viral French Pharmacy items": ["a313", "Nuxe", "Biafine", "Ialuset"] },
       { "Drugstore skincare brands": ["cerave", "cetaphil", "neutrogena", "burts bees"] },
       { "Skin types": ["oily", "normal", "dry", "combination"] }
@@ -46,7 +46,7 @@ export default {
       { "Scandinavian Skincare Brands":["Lumene", "Ole Henriksen", "Eleni & Chris", "Rudolph Care"] }
     ],
   [{ "Essential Oils used in Skincare":["tea tree", "lavender", "rosehip", "chamomile"] },
-      { "Types of Treatments with a dermatologist or esthetician":["facials", "chemical peel", "microdermabrasion", "laser therapy"] },
+      { "Types of Treatments with a dermatologist or esthetician":["facials", "chemical peel", "microderm -abrasion", "laser therapy"] },
       { "Skin-friendly Foods to eat":["avocado", "salmon", "berries", "nuts"] },
       { "Environmental Skin Stressors":["pollution", "free radicals", "UV exposure", "blue light"] }
     ],
@@ -57,7 +57,7 @@ export default {
     ],
   [{ "Ingredients for Hyperpigmentation":["niacinamide", "vitamin C", "alpha arbutin", "licorice extract"] },
       { "Lesser-known Acne Triggers":["hair products", "touching face", "phones", "over exfoliate"] },
-      { "Sun Protection Habits":["reapplication", "wide-brimmed hats", "sunglasses", "seeking shade"] },
+      { "Sun Protection Habits":["reapply", "wide-brimmed hats", "sunglasses", "seeking shade"] },
       { "Dermatologist-Recommended Brands":["EltaMD", "Cetaphil", "Differin", "Vanicream"] }
     ],
   [{ "Skin Barrier Support":["ceramides", "fatty acids", "cholesterol", "niacinamide"] },

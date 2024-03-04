@@ -25,6 +25,11 @@ export default {
       { "Celebrity owned skincare brands": ["Rhode", "SKKN", "Honest", "Fenty"] },
       { "Supplements taken for skin": ["collagen", "omega 3", "vitamin e", "zinc"] }
      ],
+     [{ "Top Dermatologist YouTubers": ["Dr Dray", "PillowTalkDerm", "Doctorly", "Dr Sam Ellis"] },
+      { "Viral French Pharmacy items": ["a313", "Nuxe", "Biafine", "Ialuset"] },
+      { "Drugstore skincare brands": ["cerave", "cetaphil", "neutrogena", "burts bees"] },
+      { "Skin types": ["oily", "normal", "dry", "combination"] }
+     ],
   [{ "Common acne triggers": ["pillowcases", "stress", "food", "sleep"] },
       { "Brands that Make facial mists": ["Avene", "Evian", "La Roche Posay", "caudelie"] },
       { "enhanced adverse effects of not wearing spf": ["aging", "burn", "cancer", "wrinkles"] },

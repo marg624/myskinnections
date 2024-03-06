@@ -31,7 +31,7 @@ export default {
       { "Skin types": ["oily", "normal", "dry", "combination"] }
      ],
   [{ "Common acne triggers": ["pillowcases", "stress", "food", "sleep"] },
-      { "Brands that Make facial mists": ["Avene", "Evian", "La Roche Posay", "caudelie"] },
+      { "Brands that Make facial mists": ["Avene", "Evian", "La Roche Posay", "caudalie"] },
       { "enhanced adverse effects of not wearing spf": ["aging", "burn", "cancer", "wrinkles"] },
       { "types of acne": ["whiteheads", "Papules", "Nodules", "Blackheads"] }
      ],

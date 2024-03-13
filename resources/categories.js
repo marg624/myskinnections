@@ -70,6 +70,11 @@ export default {
       { "French Pharmacy Brands":["Avene", "Bioderma", "Vichy", "Caudalie"] },
       { "Types of Exfoliants": ["physical", "chemical", "scrubs", "enzymes"] }
     ],
+  [{ "Brands that sell at-home LED masks":["Qure", "OmniLux", "Dr. Dennis Gross", "Shani Darden"] },
+      { "Essential Minerals for Skin":["zinc", "selenium", "copper", "magnesium"] },
+      { "Lifestyle Habits that effect your skin":["smoking", "hydration", "diet", "sleep"] },
+      { "Artist-owned skincare brands":["humanrace", "keys soulcare", "haus", "loved01"] }
+    ],
   [{ "Japanese Drugstore Skincare Brands":["Biore", "Kose", "Hada Labo", "Senka"] },
       { "Ingredients to generally Avoid in skincare": ["parabens", "sulfates", "fragrances", "alcohol"] },
       { "things on the homepage of myskin data ios app": ["progress", "highlights", "streaks", "milestones"] },
@@ -80,17 +85,11 @@ export default {
       { "Skin Conditions":["eczema", "psoriasis", "rosacea", "acne"] },
       { "Names for Facial Expressions and Wrinkles":["laugh lines", "crow's feet", "11s", "frown lines"] }
     ],
-  [{ "Brands that sell at-home LED masks":["Qure", "OmniLux", "Dr. Dennis Gross", "Shani Darden"] },
-      { "Essential Minerals for Skin":["zinc", "selenium", "copper", "magnesium"] },
-      { "Lifestyle Habits that effect your skin":["smoking", "hydration", "diet", "sleep"] },
-      { "Artist-owned skincare brands":["humanrace", "keys soulcare", "haus", "loved01"] }
-    ], 
   [{ "Ways a skincare company can be Environmentally Aware":["packaging", "reef-safe", "sustainable", "cruelty-free"] },
       { "Reasons to adjust your typical Skincare Routine":["seasons", "travel", "post-workout", "stress"] }, 
       { "Celebrity-owned skincare brands":["uncommon-james", "kora", "EleVen", "KINLO"] },
       { "Stores you can buy skincare from":["sephora", "ulta", "Target", "CVS"] }
     ],
-
    [{ "First name of popular Skin & beauty influencers": ["James", "cassandra", "hyram", "Kate"] },
       { "Brands that have products to help with dry winter skin": ["Cerave", "LRP", "vaseline", "eucerin"] },
       { "What you can do to help alleviate eye bags": ["eye cream", "cold compress", "sleep", "quit smoking"] },

@@ -87,7 +87,7 @@ export default {
     ], 
   [{ "Ways a skincare company can be Environmentally Aware":["packaging", "reef-safe", "sustainable", "cruelty-free"] },
       { "Reasons to adjust your typical Skincare Routine":["seasons", "travel", "post-workout", "stress"] }, 
-      { "Celebrity-owned skincare brands":["uncommonjames", "kora", "EleVen", "KINLO"] },
+      { "Celebrity-owned skincare brands":["uncommon-james", "kora", "EleVen", "KINLO"] },
       { "Stores you can buy skincare from":["sephora", "ulta", "Target", "CVS"] }
     ],
 
@@ -102,7 +102,7 @@ export default {
       { "skincare icks": ["touching face", "dropper on face", "water on counter", "dirty hands"] }
      ],
    [{ "Reasons to use a vitamin c": ["dull skin", "fine lines", "sun", "tone"] },
-      { "Pregnancy safe skincare ingredients": ["hyalauronic", "vitamin c", "azelaic", "niacinamide"] },
+      { "Pregnancy safe skincare ingredients": ["hyaluronic", "vitamin c", "azelaic", "niacinamide"] },
       { "Reasons you want to Ice your skin": ["sensitivity", "irritation", "inflammation", "puffiness"] },
       { "K beauty brands": ["innisfree", "round lab", "peach & Lily", "etude"] }
      ],
@@ -116,9 +116,9 @@ export default {
       { "Habits that can trigger acne": ["smoking", "alcohol", "bad sleep", "dairy"] },
       { "side effects of accutane": ["hair loss", "peeling", "dryness", "rash"] }
      ],
-   [{ "What can build up on your pillow case": ["bacteria", "hair", "oil", "dust"] },
+   [{ "What can build up on your pillowcase": ["bacteria", "hair", "oil", "dust"] },
       { "Great ingredients for acne": ["salicylic", "retinoids", "mandelic", "BP"] },
-      { "Things in your beauty cabinet that should be replaced every couople months": ["mascara", "loofah", "razor", "sponge"] },
+      { "Things in your beauty cabinet that should be replaced every couple months": ["mascara", "loofah", "razor", "sponge"] },
       { "Skincare brands considered luxury": ["augustinus bader", "dr barbara sturm", "la mer", "La Prairie"] }
      ],
    [{ "What you can do to help alleviate dark circles": ["sleep", "cucumber", "teabags", "allergy testing"] },

@@ -87,7 +87,7 @@ export default {
     ],
   [{ "Ways a skincare company can be Environmentally Aware":["packaging", "reef-safe", "sustainable", "cruelty-free"] },
       { "Reasons to adjust your typical Skincare Routine":["seasons", "travel", "post-workout", "stress"] }, 
-      { "Celebrity-owned skincare brands":["uncommon-james", "kora", "EleVen", "KINLO"] },
+      { "Celebrity-owned skincare brands":["uncommon james", "kora", "EleVen", "KINLO"] },
       { "Stores you can buy skincare from":["sephora", "ulta", "Target", "CVS"] }
     ],
    [{ "First name of popular Skin & beauty influencers": ["James", "cassandra", "hyram", "Kate"] },
@@ -128,7 +128,7 @@ export default {
    [{ "problems benzoyl peroxide helps with": ["papules", "inflammation", "dead skin", "pustules"] },
       { "ingredients to help combat acne": ["azaleic", "tretinoin", "salicylic", "differin"] },
       { "Synonyms for Renew": ["revitalize", "regenerate", "refresh", "revive"] },
-      { "Describing Sun Damage": ["sunburned", "hyperpigmented", "wrinkled", "leathery"] }
+      { "Describing Sun Damage": ["sunburned", "hyperpig-mented", "wrinkled", "leathery"] }
      ],
    [{ "Ways to describe the appearance of post inflammatory erythema (PIE)": ["red", "pink", "inflamed", "damage"] },
       { "Synonyms for Brighten": ["illuminate", "lighten", "clarify", "enhance"] },

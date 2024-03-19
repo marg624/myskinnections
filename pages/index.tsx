@@ -6,17 +6,19 @@ import { CMS_NAME } from '../lib/constants'
 import React, {useState} from 'react';
 import utilStyles from '../styles/utils.module.css';
 import categories from '../resources/categories.js';
+import customCategories from '../resources/customcategories.js';
 import Board from '../components/Board';
 import logo from '../resources/logo.png';
 import refresh from '../resources/refresh.png';
 import * as uuid from 'uuid';
 import OptionsButton from '../components/options-button'
 import StartGame from '../components/start-game'
-
+import ReactDOM from 'react-dom';
 
 
 
 export default function Index() {
+  const [title, setTitle] = useState("");
   const [ready, setReady] = useState(false);
   const [gameId, setGameId] = useState("");
   const [winningMapCategories, setWinningMapCategories] = useState(null);
@@ -27,9 +29,16 @@ export default function Index() {
       const date = today.getDate();
      // const gameIdCreate = date >= 3 ? Math.floor((date - 3) / 7) : 0;
 
+      const queryParams = new URLSearchParams(window.location.search);
+
+      // Check if a specific query parameter exists and get its value
+      const paramValue = queryParams.get('custom');
+      const getCustom = paramValue && customCategories.game[paramValue]
+
       const winningMap = new Map();
       const winningMapCategoriesKey1 = new Map();
-      const game1 = categories.game[date]
+      const game1 = getCustom ? customCategories.game[paramValue] : categories.game[date]
+      const title = getCustom ? "It's all about " + customCategories.titles[paramValue] + "!" : ""
 
       const cat1 = Object.keys(game1[0])[0]
       winningMap.set(game1[0][cat1][0].toUpperCase(), cat1.toUpperCase());
@@ -69,6 +78,7 @@ export default function Index() {
 
       setWinningMapCategories(shuffledMap)
       setWinningMapCategoriesKey(winningMapCategoriesKey1)
+      setTitle(title)
       setReady(true)
   }
 
@@ -81,6 +91,9 @@ export default function Index() {
         <Container>
           <Intro />
           <div className={utilStyles.center}>
+          <h4 className="text-center text-xl font-bold">
+            {title}
+          </h4>
           <h3>Create four groups of four.</h3>
           </div>
           { ready && <Board winningMapWordToCats={winningMapCategories} winningMapCatToWords={winningMapCategoriesKey}  /> }

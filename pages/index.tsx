@@ -13,9 +13,6 @@ import refresh from '../resources/refresh.png';
 import * as uuid from 'uuid';
 import OptionsButton from '../components/options-button'
 import StartGame from '../components/start-game'
-import ReactDOM from 'react-dom';
-
-
 
 export default function Index() {
   const [title, setTitle] = useState("");

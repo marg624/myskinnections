@@ -13,6 +13,7 @@ import refresh from '../resources/refresh.png';
 import * as uuid from 'uuid';
 import OptionsButton from '../components/options-button'
 import StartGame from '../components/start-game'
+import { useRouter } from 'next/router';
 
 export default function Index() {
   const [title, setTitle] = useState("");
@@ -91,7 +92,8 @@ export default function Index() {
           <h4 className="text-center text-xl font-bold">
             {title}
           </h4>
-          <h3>Create four groups of four.</h3>
+          { ready && <h3>Create four groups of four.</h3> }
+          
           </div>
           { ready && <Board winningMapWordToCats={winningMapCategories} winningMapCatToWords={winningMapCategoriesKey}  /> }
           { !ready && <StartGame onClick={hitReady} /> }

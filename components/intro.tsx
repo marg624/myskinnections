@@ -11,7 +11,8 @@ const Intro = () => {
 
   const router = useRouter();
   const { custom } = router.query;
-  const subheaderString = custom === '0' ? "Special Brand Edition | A skincare themed version of Connections." : dateString + ' | A skincare themed version of Connections. Daily.'
+  const isValid = custom === '0' || custom === '1' || custom === '2'
+  const subheaderString = isValid ? "Special Brand Edition | A skincare themed version of Connections." : dateString + ' | A skincare themed version of Connections. Daily.'
 
   return (
     <section className="flex-col md:flex-row flex items-center md:justify-between mt-8 mb-8 md:mb-12">

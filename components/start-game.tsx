@@ -2,6 +2,8 @@ import Link from 'next/link'
 import arrow from '../public/assets/arrow-icon.png';
 import mainImage from '../public/assets/cover.png';
 import customImage from '../public/assets/cover0.png';
+import customImage1 from '../public/assets/cover1.png';
+import customImage2 from '../public/assets/cover2.png';
 import playImage from '../public/assets/play.png';
 import { useRouter } from 'next/router';
 import React from 'react';
@@ -16,7 +18,15 @@ const StartGame = ({
 
   const router = useRouter();
   const { custom } = router.query;
-  const imageSrc = custom === '0' ? customImage.src : mainImage.src;
+  var imageSrc = mainImage.src;
+
+  if (custom === '0') {
+    imageSrc = customImage.src;
+  } else if (custom === '1') {
+    imageSrc = customImage1.src;
+  } else if (custom === '2') {
+    imageSrc = customImage2.src;
+  }
 
   return (
     <div className="flex justify-center" >

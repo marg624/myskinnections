@@ -40,7 +40,7 @@ const StartGame = ({
           textAlign: 'center',
           width: '100%'
         }}>
-          [ Break a leg! ] <br/>
+          [ Play! ] <br/>
           <button onClick={onClick} className="hover:scale-110" > 
             <img src={playImage.src} width="100px" /> 
           </button>
